@@ -16,13 +16,23 @@ export class AppComponent {
     new Employee('John', 'Wick', 'assassin', 7500),
   ];
 
-  cuadroName:string="";
-cuadroSurname:string="";
-cuadroPosition:string="";
-cuadroSalary:number=0;
+  addEmployee() {
+    let myEmployee = new Employee(
+      this.nameBox,
+      this.surnameBox,
+      this.positionBox,
+      this.salaryBox
+    );
 
-
-  addEmployee(): void {
-    this.employees.push(new Employee('John', 'Wick', 'assassin', 7500));
+    this.employees.push(myEmployee);
   }
+
+  nameBox: string = '';
+  surnameBox: string = '';
+  positionBox: string = '';
+  salaryBox: number = 0;
+
+  // addEmployee(): void {
+  //   this.employees.push(new Employee('John', 'Wick', 'assassin', 7500));
+  // }
 }
