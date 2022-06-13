@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Employee } from '../employee.model';
 
 @Component({
@@ -10,10 +10,11 @@ export class EmployeeChildComponent implements OnInit {
   @Input() employeeInChild: Employee;
   @Input() employeeIndex: number;
 
-  characteristicsArr = [''];
+  traitsArr = ['adfdaf', '23oh3o2h'];
 
-  addCharacteristic(newCharacteristic: any) {
-    this.characteristicsArr.push(newCharacteristic);
+  addItem(newCharacteristic: any) {
+    this.traitsArr.push(newCharacteristic.value);
+    console.log('add Item in Parent', this.traitsArr);
   }
 
   constructor() {}

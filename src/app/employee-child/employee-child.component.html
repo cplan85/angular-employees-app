@@ -4,10 +4,10 @@
         <div >
           {{employeeIndex + 1}} : {{employeeInChild.name}} {{employeeInChild.surname}} {{employeeInChild.position}} {{employeeInChild.salary}}
         </div>
-        <app-characteristics-employee (employeeCharacteristics)="addCharacteristic($event)"></app-characteristics-employee>
+        <app-characteristics-employee (newItemEvent)="addItem($event)"></app-characteristics-employee>
 
         <ul>
-            <li *ngFor="let characteristic of characteristicsArr">{{characteristic}}</li>
+            <li *ngFor="let trait of traitsArr">{{trait}}</li>
           </ul>
       </div>
     </div>

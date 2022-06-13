@@ -7,7 +7,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class CharacteristicsEmployeeComponent implements OnInit {
   @Output() employeeDetails = new EventEmitter<string>();
-  addCharacteristic(value: string) {
+
+  addChildItem(value: string) {
     this.employeeDetails.emit(value);
   }
 
