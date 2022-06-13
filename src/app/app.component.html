@@ -1,4 +1,30 @@
 <div class="container">
+  <div class="col">
+    <h1>{{title}}</h1>
+  </div>
+  <br><br>
+  <form action="" class="form-group row">
+    <div class="form-group col-md 3">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" placeholder="name" class="form-control" [(ngModel)]="cuadroName">
+    </div>
+    <div class="form-group col-md 3">
+      <label for="surname">Name: </label>
+      <input type="text" name="name" id="name" placeholder="name" class="form-control" [(ngModel)]="cuadroName">
+    </div>
+    <div class="form-group col-md 3">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" placeholder="name" class="form-control" [(ngModel)]="cuadroName">
+    </div>
+    <div class="form-group col-md 3">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" placeholder="name" class="form-control" [(ngModel)]="cuadroName">
+    </div>
+
+  </form>
+</div>
+
+<div class="container">
   <div class="row">
     <div class="col">
       <div *ngFor="let employee of employees; let i=index">

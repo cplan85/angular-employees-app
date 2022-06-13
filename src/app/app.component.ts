@@ -16,6 +16,12 @@ export class AppComponent {
     new Employee('John', 'Wick', 'assassin', 7500),
   ];
 
+  cuadroName:string="";
+cuadroSurname:string="";
+cuadroPosition:string="";
+cuadroSalary:number=0;
+
+
   addEmployee(): void {
     this.employees.push(new Employee('John', 'Wick', 'assassin', 7500));
   }
