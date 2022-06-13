@@ -3,9 +3,15 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { EmployeeChildComponent } from './employee-child/employee-child.component';
+import { CharacteristicsEmployeeComponent } from './characteristics-employee/characteristics-employee.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    EmployeeChildComponent,
+    CharacteristicsEmployeeComponent,
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
