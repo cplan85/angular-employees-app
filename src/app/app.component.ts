@@ -1,3 +1,4 @@
+import { EmployeesServiceService } from './employees-service.service';
 import { Employee } from './employee.model';
 import { Component } from '@angular/core';
 
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'List of Employees';
+
+  constructor(private myService: EmployeesServiceService) {
+
+  }
 
   employees: Employee[] = [
     new Employee('John', 'Wick', 'assassin', 7500),
@@ -30,8 +35,8 @@ export class AppComponent {
       this.positionBox,
       this.salaryBox
     );
-
     this.employees.push(myEmployee);
+    this.myService.showMessage(`Name of Employee: ${myEmployee.name} ${myEmployee.surname} created`)
   }
 
   nameBox: string = '';
