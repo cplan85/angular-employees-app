@@ -12,11 +12,10 @@ export class CharacteristicsEmployeeComponent implements OnInit {
 
   addChildItem(value: string) {
     this.employeeDetails.emit(value);
-    this.myService.showMessage(`New Characteristic to add: ${value} `)
-
+    // this.myService.showMessage(`New Characteristic to add: ${value} `)
   }
-// a service is lke a shared function among different components
-  constructor(private myService: EmployeesServiceService ) {}
+  // a service is lke a shared function among different components
+  //constructor(private myService: EmployeesServiceService) {}
 
   ngOnInit(): void {}
 }
