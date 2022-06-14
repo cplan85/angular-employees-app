@@ -10,10 +10,10 @@ export class EmployeeChildComponent implements OnInit {
   @Input() employeeInChild: Employee;
   @Input() employeeIndex: number;
 
-  traitsArr = ['adfdaf', '23oh3o2h'];
+  traitsArr = [''];
 
-  addItem(newCharacteristic: any) {
-    this.traitsArr.push(newCharacteristic.value);
+  addItem(newCharacteristic: string) {
+    this.traitsArr.push(newCharacteristic);
     console.log('add Item in Parent', this.traitsArr);
   }
 

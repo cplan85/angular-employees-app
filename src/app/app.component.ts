@@ -16,6 +16,13 @@ export class AppComponent {
     new Employee('John', 'Wick', 'assassin', 7500),
   ];
 
+  traitsArr = [''];
+
+  addItem(newCharacteristic: any) {
+    this.traitsArr.push(newCharacteristic.value);
+    console.log('add Item in Parent', this.traitsArr);
+  }
+
   addEmployee() {
     let myEmployee = new Employee(
       this.nameBox,
