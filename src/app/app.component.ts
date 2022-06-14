@@ -1,25 +1,34 @@
 import { EmployeesServiceService } from './employees-service.service';
 import { Employee } from './employee.model';
 import { Component } from '@angular/core';
+import { EmployeesService } from './employees-service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'List of Employees';
+  employees:Employee[]=[];
 
-  constructor(private myService: EmployeesServiceService) {
+  constructor(private myService: EmployeesServiceService, private employeeService: EmployeesService) {
 
   }
 
+  ngOnInit(): void {
+    this.employees = this.employeeService.employees
+  }
+/*
   employees: Employee[] = [
     new Employee('John', 'Wick', 'assassin', 7500),
     new Employee('John', 'Lopez', 'diver', 8500),
     new Employee('Laura', 'Mendez', 'swimmer', 10500),
     new Employee('John', 'Wick', 'assassin', 7500),
   ];
+*/
+
 
   traitsArr = [''];
 
@@ -35,8 +44,10 @@ export class AppComponent {
       this.positionBox,
       this.salaryBox
     );
-    this.employees.push(myEmployee);
+ 
     this.myService.showMessage(`Name of Employee: ${myEmployee.name} ${myEmployee.surname} created`)
+
+    this.employeeService.addEmployeeService(myEmployee)
   }
 
   nameBox: string = '';
