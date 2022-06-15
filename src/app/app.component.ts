@@ -11,16 +11,17 @@ import { OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'List of Employees';
-  employees:Employee[]=[];
+  employees: Employee[] = [];
 
-  constructor(private myService: EmployeesServiceService, private employeeService: EmployeesService) {
-
-  }
+  constructor(
+    private myService: EmployeesServiceService,
+    private employeeService: EmployeesService
+  ) {}
 
   ngOnInit(): void {
-    this.employees = this.employeeService.employees
+    this.employees = this.employeeService.employees;
   }
-/*
+  /*
   employees: Employee[] = [
     new Employee('John', 'Wick', 'assassin', 7500),
     new Employee('John', 'Lopez', 'diver', 8500),
@@ -28,7 +29,6 @@ export class AppComponent implements OnInit {
     new Employee('John', 'Wick', 'assassin', 7500),
   ];
 */
-
 
   traitsArr = [''];
 
@@ -44,10 +44,10 @@ export class AppComponent implements OnInit {
       this.positionBox,
       this.salaryBox
     );
- 
-    this.myService.showMessage(`Name of Employee: ${myEmployee.name} ${myEmployee.surname} created`)
 
-    this.employeeService.addEmployeeService(myEmployee)
+    //this.myService.showMessage(`Name of Employee: ${myEmployee.name} ${myEmployee.surname} created`)
+
+    this.employeeService.addEmployeeService(myEmployee);
   }
 
   nameBox: string = '';
