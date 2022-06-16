@@ -1,9 +1,10 @@
 <div>
-    <h1><b>Angular</b> Manipulation of Dom con <i>Render2</i></h1>
+    <h1><b>Angular</b> Manipulation of Dom with <i>Render2</i> and <i>ViewChild</i></h1>
     <div>
-        <span>Data text here</span>
+        <span #asTitle id="title">{{data.text}}</span>
     </div>
     <div>
-        Image Here
+      <img #asImage clas="img" [src]="data.url" alt="">
     </div>
+    <button class="btn btn-warning" (click)="change()">CLICK FOR CHANGE</button>
 </div>
