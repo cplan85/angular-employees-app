@@ -15,6 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 // for reactive forms here and include in imports 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ViewChildComponent } from './view-child/view-child.component';
 
 
 const appRoutes: Routes = [
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
     AboutComponent,
     ContactComponent,
     BasicFormComponent,
+    ViewChildComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes), ReactiveFormsModule],
   providers: [EmployeesServiceService, EmployeesService],
