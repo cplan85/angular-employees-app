@@ -12,12 +12,16 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
+import { BasicFormComponent } from './basic-form/basic-form.component';
+// for reactive forms here and include in imports 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponentComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
@@ -29,8 +33,9 @@ const appRoutes: Routes = [
     ProjectsComponent,
     AboutComponent,
     ContactComponent,
+    BasicFormComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes), ReactiveFormsModule],
   providers: [EmployeesServiceService, EmployeesService],
   bootstrap: [AppComponent],
 })

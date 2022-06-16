@@ -1,0 +1,28 @@
+<h1>Basic Forms</h1>
+<form [formGroup]="signupForm" (ngSubmit)="send(signupForm.value)">
+    <label for="">
+        Name
+    </label>
+    <input formControlName="name" type="text">
+    <br/>
+
+    <label for="">
+        User
+    </label>
+    <input formControlName="user" type="text">
+    <br/>
+
+    <label for="">
+        Email
+    </label>
+    <input formControlName="email" type="email">
+    <div style="color:red" *ngIf="signupForm.get('email')!.hasError('email') && signupForm.get('email')!.touched">It is necessary to introduce email</div>
+    <br/>
+
+    <label for="">
+        Password
+    </label>
+    <input formControlName="password" type="password">
+    <br/>
+    <button [disabled]="signupForm.invalid" class="btn btn-primary" type="submit">Register</button>
+</form>

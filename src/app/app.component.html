@@ -8,49 +8,21 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Projects</a>
+        <a class="nav-link" href="/projects">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="/about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="/contact">Contact</a>
       </li>
     </ul>
   </div>
 
 </nav>
+<router-outlet></router-outlet>
 
-<div class="container">
-  <div class="col" style="text-align: center;">
-    <h1>{{title}}</h1>
-  </div>
-  <br><br>
-  <form action="" class="form-group row">
-    <div class="form-group col-md 3">
-      <label for="name">Name: </label>
-      <input type="text" name="name" id="name" placeholder="name" class="form-control" [(ngModel)]="nameBox">
-    </div>
-    <div class="form-group col-md 3">
-      <label for="surname">Surname: </label>
-      <input type="text" name="surname" id="surname" placeholder="surname" class="form-control" [(ngModel)]="surnameBox">
-    </div>
-    <div class="form-group col-md 3">
-      <label for="name">Position: </label>
-      <input type="text" name="position" id="position" placeholder="position" class="form-control" [(ngModel)]="positionBox">
-    </div>
-    <div class="form-group col-md 3">
-      <label for="name">Salary: </label>
-      <input type="text" name="salary" id="salary" placeholder="salary" class="form-control" [(ngModel)]="salaryBox">
-    </div>
+<app-basic-form></app-basic-form>
 
-  </form>
-  <br>
-  <div class="col">
-    <button type="submit" class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
-  </div>
 
-</div>
 
-<br><br><br>
-<app-employee-child *ngFor="let employee of employees; let i=index" [employeeInChild]="employee" [employeeIndex]="i"></app-employee-child>
